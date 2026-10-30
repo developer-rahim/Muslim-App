@@ -1,16 +1,59 @@
-# api_test
+# Muslim-App
 
-A new Flutter project.
+An online Quran app with surah browsing, caching and location features.
+
+## Highlights
+
+- **Online mode** — surah list and pages fetched over the network.
+- **Local mode** — a bundled JSON copy of the Quran for offline reading.
+- Local SQLite caching for faster repeat access.
+- Pull-to-refresh and Google Maps integration.
+
+## Tech Stack
+
+| Concern | Choice |
+|---|---|
+| UI | Flutter, Material |
+| Networking | `http` |
+| Persistence | `sqflite`, `path` |
+| UX | `pull_to_refresh` |
+| Maps | `google_maps_flutter` |
+
+## Project Structure
+
+```
+lib/
+- `local_json_quran_app`
+- `online_quran_app`
+- `main.dart`
+```
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+- Flutter `>= 3.16` (Dart `>= 3.2`)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Run
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+git clone https://github.com/developer-rahim/Muslim-App.git
+cd Muslim-App
+flutter pub get
+flutter run
+```
+
+### Test
+
+```bash
+flutter test
+flutter analyze
+```
+
+## Notes
+
+Two implementations sit side by side — `local_json_quran_app` and `online_quran_app` — so you can compare offline and network-backed data sources.
+
+## License
+
+Released under the MIT License.
